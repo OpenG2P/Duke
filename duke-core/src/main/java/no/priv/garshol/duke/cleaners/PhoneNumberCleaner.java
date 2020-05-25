@@ -25,6 +25,11 @@ public class PhoneNumberCleaner implements Cleaner {
   public PhoneNumberCleaner() {
     this.sub = new DigitsOnlyCleaner();
   }
+  
+  public PhoneNumberCleaner(Map<String, CountryCode> ccodes) {
+    this();
+    this.ccodes.putAll(ccodes);
+  }
 
   // ALGORITHM: 
   // first look for + or 00. if they're there, then find country code.
