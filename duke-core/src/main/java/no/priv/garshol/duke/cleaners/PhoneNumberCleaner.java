@@ -91,7 +91,7 @@ public class PhoneNumberCleaner implements Cleaner {
     return false;
   }
 
-  static class CountryCode {
+  public static class CountryCode {
     private String prefix;
     private boolean strip_zero; // strip initial zero after country code
     private int min_length; // length of phone numbers
